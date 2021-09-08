@@ -8,7 +8,7 @@
 
 ----
 
-## Used Technologies
+### Used Technologies
 
 - Java 8
 - Spring Boot
@@ -22,16 +22,16 @@
 
 ----
 
-# API Endpoints
+## API Endpoints
 
 ![endpoints]()
 
-#### Instructor Controller
+### Instructor Controller
 
 | Route                                                        | HTTP Verb | POST Body  | Description              |
 | ------------------------------------------------------------ | --------- | ---------- | ------------------------ |
 | http://localhost:8080/api/instructors                         | `POST`    | InstructorDto   | Create Instructor                |
-| http://localhost:8080/api/instructors                      | `GET`     | List<InstructorDto>      | Get All Instructors           |
+| http://localhost:8080/api/instructors                      | `GET`     | List-InstructorDto-      | Get All Instructors           |
 | http://localhost:8080/api/instructors/{id}            | `DELETE`  | Empty    | Delete Instructor by instructorId  |
 | http://localhost:8080/api/instructors         | `PUT`     | Empty    |   Update Instructor   |
 
@@ -41,7 +41,7 @@
 | Route                                                        | HTTP Verb | POST Body  | Description              |
 | ------------------------------------------------------------ | --------- | ---------- | ------------------------ |
 | http://localhost:8080/api/students                         | `POST`    | StudentDto   | Create Student                |
-| http://localhost:8080/api/students                      | `GET`     | List<StudentDto>      | Get All Students           |
+| http://localhost:8080/api/students                      | `GET`     | List-StudentDto-      | Get All Students           |
 | http://localhost:8080/api/students/{id}            | `DELETE`  | Empty    | Delete Student by studentId  |
 | http://localhost:8080/api/students         | `PUT`     | Empty    |   Update Student   |
 
@@ -51,7 +51,7 @@
 | Route                                                        | HTTP Verb | POST Body  | Description              |
 | ------------------------------------------------------------ | --------- | ---------- | ------------------------ |
 | http://localhost:8080/api/courses                         | `POST`    | CourseDto   | Create Course                |
-| http://localhost:8080/api/courses                      | `GET`     | List<CourseDto>      | Get All Courses           |
+| http://localhost:8080/api/courses                      | `GET`     | List-CourseDto-      | Get All Courses           |
 | http://localhost:8080/api/courses/{id}            | `DELETE`  | Empty    | Delete Course by courseId  |
 | http://localhost:8080/api/courses         | `PUT`     | Empty    |   Update Course   |
 
