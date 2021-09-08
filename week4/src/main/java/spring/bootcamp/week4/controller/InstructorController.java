@@ -21,7 +21,7 @@ public class InstructorController {
     }
 
     @PostMapping
-    public ResponseEntity<InstructorDto> saveInstructor(@Valid @RequestBody InstructorDto instructorDto){
+    public ResponseEntity<InstructorDto> save(@Valid @RequestBody InstructorDto instructorDto){
         InstructorDto result = instructorService.save(instructorDto);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
