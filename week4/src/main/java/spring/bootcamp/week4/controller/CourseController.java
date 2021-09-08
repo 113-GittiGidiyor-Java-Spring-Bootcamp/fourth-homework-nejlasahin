@@ -31,18 +31,32 @@ public class CourseController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    /**
+     *
+     * @param courseDto
+     * @return
+     */
     @PutMapping
     public ResponseEntity<?> update(@Valid @RequestBody CourseDto courseDto){
         courseService.update(courseDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){
         courseService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping
     public ResponseEntity<List<CourseDto>> findAll(){
         List<CourseDto> courses = courseService.findAll();

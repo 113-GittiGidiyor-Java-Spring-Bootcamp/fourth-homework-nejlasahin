@@ -20,24 +20,43 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    /**
+     *
+     * @param studentDto
+     * @return
+     */
     @PostMapping
     public ResponseEntity<StudentDto> save(@Valid @RequestBody StudentDto studentDto){
         StudentDto result = studentService.save(studentDto);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    /**
+     *
+     * @param studentDto
+     * @return
+     */
     @PutMapping
     public ResponseEntity<?> update(@Valid @RequestBody StudentDto studentDto){
         studentService.update(studentDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){
         studentService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    /**
+     * 
+     * @return
+     */
     @GetMapping
     public ResponseEntity<List<StudentDto>> findAll(){
         List<StudentDto> students = studentService.findAll();

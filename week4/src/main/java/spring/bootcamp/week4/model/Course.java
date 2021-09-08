@@ -26,23 +26,18 @@ import java.util.Set;
 @Table(name = "courses")
 public class Course extends BaseEntity {
 
-    // The course name of this Course.
     @Column(name = "course_name")
     private String courseName;
 
-    // The course code of this Course.
     @Column(name = "course_code")
     private String courseCode;
 
-    // The credit score of this Course.
     @Column(name = "credit_score")
     private int creditScore;
 
-    // The students of this Course.
     @ManyToMany(mappedBy = "courses")
     private Set<Student> students = new HashSet<>();
 
-    // The instructor of this Course.
     @ManyToOne
     @JoinColumn(name = "instructor_id", foreignKey = @ForeignKey(name = "fk_instructor"))
     private Instructor instructor;

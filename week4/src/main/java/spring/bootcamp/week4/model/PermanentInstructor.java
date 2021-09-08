@@ -27,7 +27,6 @@ import javax.persistence.Table;
 @PrimaryKeyJoinColumn(name="id")
 public class PermanentInstructor extends Instructor{
 
-    // The fixed salary of this Permanent Instructor.
     @Column(name = "fixed_salary")
     private double fixedSalary;
 }

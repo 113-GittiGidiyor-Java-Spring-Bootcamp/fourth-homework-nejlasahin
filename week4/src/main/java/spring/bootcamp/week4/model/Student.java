@@ -27,24 +27,19 @@ import java.util.Set;
 @Table(name = "students")
 public class Student extends BaseEntity {
 
-    // The first and last name of this Student.
     @Column(name = "full_name")
     private String fullName;
 
-    // The address of this Student.
     @Column(name = "address")
     private String address;
 
-    // The gender of this Student.
     @Column(name = "gender")
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    // The age of this Student.
     @Column(name = "age")
     private int age;
 
-    // The courses of this Student.
     @ManyToMany
     @JoinTable(
             name = "course_students",

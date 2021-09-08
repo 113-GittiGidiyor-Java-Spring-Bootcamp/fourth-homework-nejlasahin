@@ -27,7 +27,6 @@ import javax.persistence.Table;
 @PrimaryKeyJoinColumn(name="id")
 public class VisitingResearcher extends Instructor{
 
-    // The hourly salary of this Visiting Researcher.
     @Column(name = "hourly_salary")
     private double hourlySalary;
 }

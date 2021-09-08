@@ -20,24 +20,43 @@ public class InstructorController {
         this.instructorService = instructorService;
     }
 
+    /**
+     *
+     * @param instructorDto
+     * @return
+     */
     @PostMapping
     public ResponseEntity<InstructorDto> save(@Valid @RequestBody InstructorDto instructorDto){
         InstructorDto result = instructorService.save(instructorDto);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    /**
+     *
+     * @param instructorDto
+     * @return
+     */
     @PutMapping
     public ResponseEntity<?> update(@Valid @RequestBody InstructorDto instructorDto){
         instructorService.update(instructorDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable long id){
         instructorService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping
     public ResponseEntity<List<InstructorDto>> findAll(){
         List<InstructorDto> instructors = instructorService.findAll();

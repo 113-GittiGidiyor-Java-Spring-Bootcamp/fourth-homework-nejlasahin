@@ -24,15 +24,12 @@ import javax.persistence.*;
 @Table(name = "app_error_response")
 public class AppError extends BaseEntity {
 
-    // The status of this App Error.
     @Column(name = "status")
     private int status;
 
-    // The message of this App Error.
     @Column(name = "message")
     private String message;
 
-    // The timestamp of this App Error.
     @Column(name = "timestamp")
     private long timestamp;
 }

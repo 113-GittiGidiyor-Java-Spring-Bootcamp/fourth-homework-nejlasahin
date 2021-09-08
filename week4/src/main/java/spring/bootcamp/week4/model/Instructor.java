@@ -41,19 +41,15 @@ public class Instructor extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private InstructorType type;
 
-    // The first and last name of this Instructor.
     @Column(name = "full_name")
     private String fullName;
 
-    // The address of this Instructor.
     @Column(name = "address")
     private String address;
 
-    // The phone number of this Instructor. Phone number must be 10 characters long.
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    // The course of this Instructor.
     @OneToMany(mappedBy = "instructor")
     private Set<Course> courses = new HashSet<>();
 }
