@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import spring.bootcamp.week4.model.abstracts.BaseEntity;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 /**
  * Represents an App Error inherited from BaseEntity class.
@@ -21,8 +22,12 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "app_error_response")
-public class AppError extends BaseEntity {
+@Table(name = "exception_loggers")
+public class ExceptionLogger{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     @Column(name = "status")
     private int status;
@@ -30,6 +35,6 @@ public class AppError extends BaseEntity {
     @Column(name = "message")
     private String message;
 
-    @Column(name = "timestamp")
-    private long timestamp;
+    @Column(name = "date")
+    private LocalDate date;
 }

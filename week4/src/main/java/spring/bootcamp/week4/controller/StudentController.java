@@ -54,7 +54,7 @@ public class StudentController {
     }
 
     /**
-     * 
+     *
      * @return
      */
     @GetMapping
